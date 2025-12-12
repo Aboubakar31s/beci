@@ -1,0 +1,152 @@
+!<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Belle Étoile en Côte d’Ivoire (BECI) – Développement Social et Économique</title>
+<meta name="description" content="BECI, association à but non lucratif en Côte d’Ivoire, lutte contre la pauvreté, soutient les AGR, promeut l’entrepreneuriat des jeunes et défend les droits humains.">
+<meta property="og:title" content="La Belle Étoile en Côte d’Ivoire (BECI)">
+<meta property="og:description" content="Développement social et économique des populations défavorisées en Côte d’Ivoire.">
+<meta property="og:image" content="https://www.votresite.ci/logo-beci.png">
+<meta property="og:type" content="website">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {font-family:'Roboto',sans-serif; margin:0; background:linear-gradient(135deg,#f0f4f8,#e0e7ff); color:#333; scroll-behavior:smooth;}
+nav{position:fixed; top:0; width:100%; display:flex; justify-content:space-between; align-items:center; padding:12px 30px; background:rgba(0,64,128,0.85); box-shadow:0 6px 15px rgba(0,0,0,0.1); backdrop-filter:blur(6px); z-index:1000; transition:background 0.3s;}
+nav:hover{background:rgba(0,64,128,0.95);}
+nav .logo{display:flex; align-items:center;}
+nav .logo img{width:50px; margin-right:10px;}
+nav a{color:#fff; text-decoration:none; margin:0 15px; font-weight:bold; transition:color 0.3s, transform 0.3s;}
+nav a:hover{color:#ffdd57; transform:scale(1.1);}
+
+header{height:80vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; color:#fff; background:linear-gradient(135deg,#004080,#0066cc); clip-path: polygon(0 0,100% 0,100% 85%,0 100%); position:relative;}
+header h1{font-size:3em; margin-bottom:15px; animation:fadeDown 1s forwards;}
+header p{font-size:1.2em; color:#cce0ff; animation:fadeDown 1s 0.3s forwards;}
+@keyframes fadeDown{from{opacity:0; transform:translateY(-30px);}to{opacity:1; transform:translateY(0);}}
+
+.container{max-width:1200px; margin:auto; padding:60px 20px;}
+.section{margin-bottom:80px; opacity:0; transform:translateY(50px); transition:all 0.8s ease-out;}
+.section.visible{opacity:1; transform:translateY(0);}
+.section h2{color:#004080; font-size:2.5em; margin-bottom:25px; position:relative; text-align:center;}
+.section h2::after{content:''; width:80px; height:4px; background:#ffdd57; display:block; margin:15px auto 0; border-radius:2px;}
+
+.mission-grid, .projects-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px;}
+.mission-item, .project-item{background:#fff; border-radius:20px; padding:25px; box-shadow:0 15px 30px rgba(0,0,0,0.1); text-align:center; transition:transform 0.5s, box-shadow 0.5s; opacity:0; transform:translateY(50px); perspective:1000px;}
+.mission-item.visible, .project-item.visible{opacity:1; transform:translateY(0);}
+.mission-item:hover, .project-item:hover{transform:translateY(-10px) rotateY(3deg) rotateX(3deg) scale(1.05); box-shadow:0 20px 50px rgba(0,0,0,0.15);}
+.mission-item img, .project-item img{width:100%; height:200px; object-fit:cover; border-radius:15px; margin-bottom:15px;}
+.mission-item h3, .project-item h3{margin-bottom:12px; color:#004080; font-size:1.4em;}
+.project-item p{margin-bottom:15px; color:#555;}
+.project-item a{display:inline-block; padding:12px 25px; border-radius:30px; background:linear-gradient(135deg,#004080,#0066cc); color:#fff; text-decoration:none; font-weight:bold; transition:all 0.3s;}
+.project-item a:hover{background:linear-gradient(135deg,#0066cc,#004080); transform:scale(1.05);}
+
+.contact{background:linear-gradient(135deg,#004080,#0066cc); color:#fff; padding:60px 20px; border-radius:20px; text-align:center; transition:all 0.5s; opacity:0; transform:translateY(50px);}
+.contact.visible{opacity:1; transform:translateY(0);}
+.contact h2{color:#ffdd57; margin-bottom:35px; font-size:2em;}
+.contact a{display:inline-block; margin:10px 15px; padding:14px 30px; color:#004080; background:#ffdd57; text-decoration:none; border-radius:30px; font-weight:bold; transition:all 0.3s;}
+.contact a:hover{background:#fff; color:#004080; transform:scale(1.05);}
+.contact-form{max-width:650px; margin:auto; text-align:left;}
+.contact-form input, .contact-form textarea{width:100%; padding:14px; margin-bottom:20px; border-radius:12px; border:none; font-size:1em; box-shadow:0 4px 15px rgba(0,0,0,0.1);}
+.contact-form button{padding:14px 30px; border:none; border-radius:30px; background:#ffdd57; color:#004080; font-weight:bold; cursor:pointer; transition:all 0.3s;}
+.contact-form button:hover{background:#fff;}
+.map-container{width:100%; height:350px; border-radius:20px; overflow:hidden; margin-top:30px; margin-bottom:30px; box-shadow:0 10px 30px rgba(0,0,0,0.1);}
+.social-links{margin-top:30px;}
+.social-links a{margin:0 12px; display:inline-block;}
+.social-links svg{width:35px; height:35px; fill:#fff; transition:fill 0.3s;}
+.social-links a:hover svg{fill:#ffdd57;}
+@media(max-width:768px){header h1{font-size:2em;} .section h2{font-size:2em;} nav{flex-direction:column;} nav a{margin:5px 0;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><img src="logo-beci.png" alt="BECI Logo"><span style="color:#fff;font-weight:bold;">BECI</span></div>
+  <div>
+    <a href="#about">À propos</a>
+    <a href="#missions">Missions</a>
+    <a href="#projects">Projets</a>
+    <a href="#contact-info">Coordonnées</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header>
+  <h1>La Belle Étoile en Côte d’Ivoire (BECI)</h1>
+  <p>Récépissé officiel : n° 475/INT/DGAT/DGA/SDVA – 4 novembre 2011</p>
+</header>
+
+<main class="container">
+  <!-- À propos -->
+  <section class="section" id="about">
+    <h2>Qui sommes-nous ?</h2>
+    <p>BECI est une association à but non lucratif dédiée au développement social et économique des populations défavorisées en Côte d’Ivoire, en mettant l’accent sur l’autonomisation, l’entrepreneuriat et la protection des droits humains.</p>
+  </section>
+
+  <!-- Missions -->
+  <section class="section" id="missions">
+    <h2>Nos missions</h2>
+    <div class="mission-grid">
+      <div class="mission-item"><img src="mission1.webp" alt="Lutter contre la pauvreté" loading="lazy"><h3>Lutter contre la pauvreté</h3><p>Actions concrètes pour réduire la pauvreté et améliorer la vie des populations vulnérables.</p></div>
+      <div class="mission-item"><img src="mission2.webp" alt="Autonomisation économique" loading="lazy"><h3>Autonomisation économique</h3><p>Soutien à la création d’AGR pour aider les familles à devenir indépendantes.</p></div>
+      <div class="mission-item"><img src="mission3.webp" alt="Insertion des jeunes" loading="lazy"><h3>Insertion des jeunes</h3><p>Formations et programmes pour l’entrepreneuriat et l’insertion professionnelle.</p></div>
+      <div class="mission-item"><img src="mission4.webp" alt="Droits humains et environnement" loading="lazy"><h3>Droits humains & environnement</h3><p>Promotion des droits et sensibilisation à la préservation de l’environnement.</p></div>
+    </div>
+  </section>
+
+  <!-- Projets -->
+  <section class="section" id="projects">
+    <h2>Projets récents</h2>
+    <div class="projects-grid">
+      <div class="project-item"><img src="project1.webp" alt="Formation en entrepreneuriat" loading="lazy"><h3>Formation en entrepreneuriat</h3><p>Programme pour jeunes afin de développer leurs compétences et créer leurs propres activités.</p><a href="#">En savoir plus</a></div>
+      <div class="project-item"><img src="project2.webp" alt="Soutien aux AGR" loading="lazy"><h3>Soutien aux AGR</h3><p>Aide à l’installation d’activités génératrices de revenus pour familles défavorisées.</p><a href="#">En savoir plus</a></div>
+      <div class="project-item"><img src="project3.webp" alt="Campagne de sensibilisation" loading="lazy"><h3>Campagne de sensibilisation</h3><p>Actions pour promouvoir les droits de l’enfant, la femme et la protection de l’environnement.</p><a href="#">En savoir plus</a></div>
+    </div>
+  </section>
+
+  <!-- Coordonnées & Maps -->
+  <section class="section" id="contact-info">
+    <h2>Nos coordonnées</h2>
+    <div itemscope itemtype="https://schema.org/Organization">
+      <span itemprop="name">La Belle Étoile en Côte d’Ivoire (BECI)</span>
+      <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="streetAddress">Quartier Kennedy, Abobo</span>,
+        <span itemprop="postalCode">13 B.P. 2894</span>,
+        <span itemprop="addressLocality">Abidjan</span>,
+        <span itemprop="addressCountry">Côte d’Ivoire</span>
+      </div>
+      <span itemprop="telephone">+225 XXX XXX XXX</span>
+      <span itemprop="email">contact@beci.ci</span>
+    </div>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Contact & réseaux sociaux -->
+  <section class="contact" id="contact">
+    <h2>Contactez-nous</h2>
+    <div class="contact-form">
+      <form action="mailto:contact@beci.ci" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+    <div class="social-links">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5H15c-1.2 0-1.6.8-1.6 1.6V12H17l-.4 3h-2v7A10 10 0 0 0 22 12"></path></svg></a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm4.5-2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg></a>
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 5h4v12H4zm7 0h3v1.7h.1c.4-.7 1.3-1.4 2.7-1.4 2.9 0 3.4 1.9 3.4 4.4V20h-4v-4.1c0-1 .1-2.3-1.4-2.3-1.5 0-1.7 1.1-1.7 2.2V20h-4z"/></svg></a>
+    </div>
+  </section>
+</main>
+
+<script>
+const sections = document.querySelectorAll('.section, .mission-item, .project-item, .contact');
+const observer = new IntersectionObserver(entries => {entries.forEach(entry => {if(entry.isIntersecting){entry.target.classList.add('visible');}});},{threshold:0.2});
+sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
